@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/admin.css">
+    <title>Usuario de Administrador</title>
+</head>
+
+<body>
+    <div class="container logo">
+        <div class="titulo">
+            <a class="reset" id="reload" href="/verarchivos">
+                <h1>Ed<mark class="uca">uca</mark>dos</h1>
+                <h6>Tu herramienta de estudio</h6>
+            </a>
+        </div>
+    </div>
+
+    <section class="dashboard">
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <span class="text">Panel <mark class="uca">de</mark> Administrador</span>
+                </div>
+                <div class="boxes">
+                    <div class="box box1">
+                        <span class="text">Materias</span>
+                        <span class="number"> {{ param["cantidad_materias"][0][0] }} </span>
+                        <button type="submit" class="show-list-button">Mostrar Lista</button>
+                        <div class="modal" id="modal">
+                            <div class="modal-content">
+                                <span class="close" id="close">&times;</span>
+                                <h3>Materias</h3>
+                                <div class="lista-materias">
+                                    <form id="form" method="get" action="/subirmateria">
+                                        <input type="text" id="addMateria" name="addMateria" placeholder="Nueva Materia">
+                                        <button type="submit" id="addMateriaButton">Agregar Materia</button>
+                                    </form>
+                                    {% for materia in param["lista_materias"] %}
+                                        <form id="deleteForm{{ materia[0] }}" action="/eliminarmateria" method="get">
+                                            <input type="hidden" name="materia_id" value="{{ materia[0] }}">
+                                            <li name="{{ materia[0] }}">{{ materia[1] }}
+                                                <span class="delete-materia">
+                                                    <button type="button" onclick="eliminarMateria({{ materia[0] }})">
+                                                        &#10006;
+                                                    </button>
+                                                </span>
+                                            </li>
+                                        </form>
+                                    {% endfor %}
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box box2">
+                        <span class="text">Documentos subidos</span>
+                        <span class="number">  {{ param["cantidad_archivos"][0][0] }}</span>
+                        <a href="admin-subidos" class="show-list-button">Ver</a>
+                    </div>
+                    <div class="box box3">
+                        <span class="text">Tipos de archivo</span>
+                        <span class="number">{{ param["cantidad_tipos"][0][0] }}</span>
+                        <button class="show-list-button" id="showFileTypeListButton">Mostrar Lista</button>
+
+                        <div class="modal" id="fileTypeModal">
+                            <div class="modal-content">
+                                <span class="close" id="closeFileTypeModal">&times;</span>
+                                <h3>Tipos de Archivo</h3>
+                                <div class="file-type-list">
+                                    <form id="form" method="post" action="/subirtipo">
+                                        <input type="text" id="addFileType" name="addFileType" placeholder="Nuevo Tipo de Archivo" required>
+                                        <button type="submit" id="addFileTypeButton">Agregar Tipo de Archivo</button>
+                                    </form>
+                                    
+                                    {% for tipos in param["lista_tipos"] %}
+                                        <form id="deleteForm{{ tipos[0] }}" action="/eliminartipos" method="get">
+                                            <input type="hidden" name="tipos_id" value="{{ tipos[0] }}">
+                                            <li name="{{ tipos[0] }}">{{ tipos[1] }}
+                                                <span class="delete-materia">
+                                                    <button type="button" onclick="eliminarTipo({{ tipos[0] }})">
+                                                        &#10006;
+                                                    </button>
+                                                </span>
+                                            </li>
+                                        </form>
+                                    {% endfor %}
+                                </div>
+                                <div id="fileTypeConfirmationMessage" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="activity">
+                <div class="title">
+                    <span class="text">Archivos <mark class="uca">subidos</mark> recientemente:</span>
+                </div>              
+
+                <div class="activity-data">
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th><h1>Nombre Completo</h1></th>
+                                <th><h1>Email</h1></th>
+                                <th><h1>Fecha</h1></th>
+                                <th><h1>Archivo</h1></th>
+                                <th><h1>Materia</h1></th>
+                                <th><h1>Estado</h1></th>
+                            </tr>
+                            {% for momento in param["cantdatos"] %}
+                                <tr>
+                                    <td>{{ param[momento]['nombre_persona'] }}</td>
+                                    <td>{{ param[momento]['email'] }}</td>
+                                    <td>{{ param[momento]['fecha'] }}</td>
+                                    <td>{{ param[momento]['nombre_tipo'] }}</td>
+                                    <td>{{ param[momento]['nombre_materia'] }}</td>
+                                    <td>{{ param[momento]['estado'] }}</td>
+                                    <td>
+                                        <form id="form" method="get" action="/actualizarestado">
+                                            <input type="hidden" name="archivo_id" value="{{ param[momento]["archivo_id"] }}">
+                                            <input type="hidden" name="estado" value="{{ param[momento]["estado"] }}">
+                                            <a href="{{ url_for('static', filename='uploads/' + param[momento]['nombre_pdf']) }}" target="_blank">
+                                                <p>PREVISUALIZAR ARCHIVO</p>
+                                            </a>
+                                            <button type="submit">Revisar
+                
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../static/javascript/admin.js"></script>
+</body>
+</html>

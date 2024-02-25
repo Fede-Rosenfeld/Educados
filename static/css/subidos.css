@@ -1,0 +1,567 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    box-sizing: content-box;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(28,78,130,1) 35%, rgba(65,73,105,1) 100%);
+    color:white;
+    overflow-x: hidden;
+  }
+
+
+  /* ---- END GLOBAL ---- */
+  
+  
+  /* ---- HEADER ---- */
+  
+  .header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    color: white;
+    box-sizing: content-box;
+  }
+  
+  .logo{
+    margin-left: 2%;
+    align-items: center;
+    height: 100%;
+    margin-right: 2%;
+  }
+  .titulo{
+    width: auto;
+    height: auto;
+    display: table;
+  }
+  
+  .titulo .reset{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .titulo h1 {
+    font-size: 55px;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .uca {
+    background: rgb(0, 0, 0, 0);
+    color: rgb(39, 161, 202);
+  }
+  .titulo h6{
+    margin-top: 0;
+    margin-left: 1%;
+    font-size: 15px;
+  }
+
+
+.main_box{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.toglesidebar{
+  margin-left: 1%;
+  height: 3%;
+  width: 50px;
+  font-size: 40px;
+  background: none;
+  border: solid 2px #3c6a9e9f;
+  border-radius: 10px;
+  color:white;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px #3c6a9e9f;
+}
+
+.sidebar_menu{
+  display: none;
+  margin-left: 1%;
+  position: sticky;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  border: #3c6a9e9f;
+  border-style: solid;
+  border-radius: 30px ;
+  box-shadow: 0px 0px 6px #3c6a9e9f;
+}
+
+.sidebar_menu .logo{
+  display: flex;
+  width: 98%;
+  height: 60px;
+  border-bottom: solid #3c6a9e9f;
+}
+.sidebar_menu .logo h2{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  left: 10px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.sidebar_menu .menu{
+  position: absolute;
+  top: 80px;
+  width:100%;
+}
+.sidebar_menu .menu li{
+  display: flex;
+  list-style: none;
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+
+
+.sidebar_menu .menu i{
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* --------------------------- */
+
+.contenido{
+    display: table;
+    width: 100%;
+    margin: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 3px #3c6a9e9f;
+    border-style: solid;
+    border-radius: 30px;
+}
+
+
+.miscreados{
+  margin-top: 2%;
+  text-align: center;
+}
+
+.arriba{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    align-items: center;
+    margin: 3%;
+    border: 3px #3c6a9e9f solid;
+    border-radius: 20px;
+    padding: 3px;
+    
+}
+
+
+.filtros{
+  margin-left: 2%;
+  margin-right:inherit;
+  display: flex;
+}
+
+.filtros select{
+  margin-left: 2%;
+  border-radius: 30px;
+  text-align: center;
+}
+
+#form_filtro{
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+.filtrado{
+  width: 220px;
+  font-size: 16PX;
+  margin: 1%;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+
+.buscar{
+  margin: 1%;
+  margin-top: 3%;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.buscar:hover {
+  background-color: #0056b3;
+}
+
+
+.contenedor-de-cajas{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* --------------------------- */
+}
+
+.nocoincidencia{
+  display:none;
+  font-size: 40px;
+  margin: 5%;
+}
+
+.caja{
+  width: 203px;
+	margin: 1%;
+	border-radius: 6px;
+	background:#fff;
+	box-shadow: 10px 10px 10px rgba(20, 114, 158, 0.719);
+}
+
+.caja .content-cajas{
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  margin-bottom: 0;
+  position: relative;
+  padding: 0;
+
+}
+.caja a{
+    color: rgb(0, 0, 0);
+}
+.caja a p{
+  margin: auto;
+  background: #2c90be;
+  box-shadow: 1px 1px 1px rgba(20, 114, 158, 0.719);
+  padding: 3px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+
+.caja .nomarch{
+  margin-top: 4%;
+
+}
+
+.nomarch h3{
+  min-height: 64px;
+  color:#6a6a6a;
+  overflow: hidden;
+  white-space: normal; /* Evita que el texto se divida en varias líneas */
+  text-overflow: ellipsis; /* Añade puntos suspensivos (...) cuando el texto se desborda */
+  max-width: 100%; /* Asegura que el texto no se desborde del div */
+  margin-top: 3%;
+}
+
+
+.caja .info{
+  margin-top: 5%;
+  overflow: hidden;
+    text-overflow: ellipsis; /* Añade puntos suspensivos (...) cuando el texto se desborda */
+    max-width: 100%; /* Asegura que el texto no se desborde del div */
+}
+
+.materia{
+  line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+  overflow: hidden;
+
+    /* Evita que el texto se divida en varias líneas */
+    white-space: nowrap;
+}
+
+
+.tipo{
+  line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+}
+
+
+.stats{
+  margin: 2%;
+  margin-bottom: 0;
+  display: flex;
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+  align-items: center;
+  position: relative;
+  }
+
+.cantlikes{
+	color: #6a6a6a;
+	font-size: 16px;
+  margin-right: 4%;
+  }
+
+
+.mensaje{
+  display: none;
+}
+
+.mensaje_click{
+  display: block;
+  width: 100px;
+  position: absolute;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 1;
+}
+
+
+.comment{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.comentarios{
+  font-size: 160%;
+  float: right;
+  margin-left: auto;
+}
+
+.usuario{
+	line-height: 1.8;
+	color: #6a6a6a;
+	font-size: 14px;
+}
+
+
+
+/* ESTO ES LO DEL COMENTARIO */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.modal-content {
+  border-radius: 30px;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* ACA TERMINA COMENTARIO */
+
+/* ACA EMPIEZA  MODAL CAJA COMENTS*/
+/* Estilos para el modal de comentarios */
+.comentarios{
+  cursor:pointer;
+}
+
+.modal-coms {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.modal-coments-box {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 70%;
+  position: relative;
+  max-height: 60%;
+  overflow-y: scroll;
+}
+
+.close-modal {
+  color: #555;
+  position: absolute;
+  top: -2px;
+  right: 17px;
+  font-size: 41px;
+  cursor: pointer;
+}
+
+.modal-coments-box h2 {
+  text-align: center;
+}
+
+.coments {
+  margin-top: 20px;
+  border: solid 2px #3c6a9e9f;
+  border-radius: 6px;
+  padding: 2%;
+}
+
+.coments h3 {
+  font-weight: bold;
+}
+.borrarForm button{
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.delete{
+  font-size: x-large;
+}
+
+
+/* ACA TERMINA  MODAL CAJA COMENTS*/
+
+@media only screen and  (max-width:768px){
+  *{
+    overflow-x: hidden;
+  }
+  .header {
+      height: auto; /* Ajusta la altura según el contenido */
+      max-height: 400px;
+      flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    }
+  .logo {
+    margin-bottom: 0;
+    margin-right: 20%;
+    margin: 2% auto; /* Centra el logo */
+  }
+  .titulo {
+      margin: 2% auto; /* Centra el título */
+  }
+  .titulo h1{
+      font-size: 60px;
+  }
+  .titulo h6{
+      font-size: 15px;
+      margin-bottom: 0;
+  }
+  .sidebar_menu{
+    min-width: 100px;
+    width: auto;
+  }
+  .sidebar_menu .menu li a{
+    font-size: 12px;
+  }
+
+  .sidebar_menu .logo h2{
+    font-size: 12px;
+} 
+  .arriba{
+    border: none;
+    border-bottom: solid grey 3px;
+    display: table;
+    width: auto;
+    padding-bottom: 10px;
+    margin: 0;
+    margin: 3%;
+  }
+
+  .filtros{
+    display: table;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .filtros select{
+    margin: 2%;
+  }
+
+  #form_filtro{
+    display: table;
+  }
+
+  .filtrado {
+    margin: 0;
+    border-radius: 30px;
+    padding: 2px;
+    font-size: 14px;
+    width: auto;
+  }
+    .buscar{
+      font-size: 14px;
+      padding: 2px;
+    }
+    .nocoincidencia{
+      display:none;
+      font-size: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* -------- SUBIR ARCHIVOS   ---------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- END SUBIR ARCHIVOS   ---------  */
+
+
+
+/* -------- PERFIL   ---------  */
+
+
+
+
+/* -------- END PERFIL   ---------  */

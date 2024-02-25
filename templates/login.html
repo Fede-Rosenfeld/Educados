@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script defer src="../static/javascript/login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form" method="post" action="/signin">
+            <h1>Iniciar sesion</h1>
+            {% if param.get('error_msg_login') != None  %}
+                <div class="msg">
+                    <p>{{ param.get('error_msg_login')}}</p>
+                </div>
+            {% endif %}
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Contraseña</label>
+                <input id="password" name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Iniciar sesion</button>
+            <div class="caja-registro-footer">
+                ¿No tenes una cuenta? <a href="register">Registrate</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

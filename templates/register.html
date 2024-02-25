@@ -1,0 +1,51 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+    <script defer src="../static/javascript/registerindex.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form" method="post" action="/signup">
+            <h1>Registro</h1>
+            <div class="input-control">
+                <label for="name">Nombre</label>
+                <input id="nombre" name="nombre" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="lastname">Apellido</label>
+                <input id="lastname" name="apellido" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="username">Nombre de usuario</label>
+                <input id="username" name="nomusuario" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Contraseña</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Confirmar contraseña</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit" id="botregister">Registrarse</button>
+            <div class="caja-registro-footer">
+                ¿Ya tenes una cuenta? <a href="login">Inicia sesión!</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

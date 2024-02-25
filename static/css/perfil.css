@@ -1,0 +1,463 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    box-sizing: content-box;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(28,78,130,1) 35%, rgba(65,73,105,1) 100%);
+    color:white;
+  }
+
+
+  /* ---- END GLOBAL ---- */
+  
+  
+  /* ---- HEADER ---- */
+  
+  .header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    color: white;
+    box-sizing: content-box;
+  }
+  
+  .logo{
+    margin-left: 2%;
+    align-items: center;
+    height: 100%;
+    margin-right: 2%;
+  }
+  .titulo{
+    width: auto;
+    height: auto;
+    display: table;
+  }
+  
+  .titulo .reset{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .titulo h1 {
+    font-size: 55px;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .uca {
+    background: rgb(0, 0, 0, 0);
+    color: rgb(39, 161, 202);
+  }
+  .titulo h6{
+    margin-top: 0;
+    margin-left: 1%;
+    font-size: 15px;
+  }
+
+
+.main_box{
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.toglesidebar{
+  margin-left: 1%;
+  height: 3%;
+  width: 50px;
+  font-size: 40px;
+  background: none;
+  border: solid 2px #3c6a9e9f;
+  border-radius: 10px;
+  color:white;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px #3c6a9e9f;
+}
+
+
+
+.sidebar_menu{
+  display: none;
+  margin-left: 1%;
+  position: sticky;
+  width: 280px;
+  background: rgba(255, 255, 255, 0.1);
+  border: #3c6a9e9f;
+  border-style: solid;
+  border-radius: 30px ;
+  box-shadow: 0px 0px 6px #3c6a9e9f;
+}
+
+.sidebar_menu .logo{
+  display: flex;
+  width: 98%;
+  height: 60px;
+  border-bottom: solid #3c6a9e9f;
+}
+.sidebar_menu .logo h2{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  left: 10px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.sidebar_menu .menu{
+  position: absolute;
+  top: 80px;
+  width:100%;
+}
+.sidebar_menu .menu li{
+  display: flex;
+  list-style: none;
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+
+
+.sidebar_menu .menu i{
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+
+.contenido {
+  width: 100%;/* Eliminamos el ancho fijo */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px #3c6a9e9f;
+  border-radius: 30px;
+  margin: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contenido h1{
+  text-align: center; /* Centramos el contenido verticalmente */
+  margin-top: 3%;
+}
+
+.small-box {
+  display: table;
+  border: solid 3px #3c6a9e9f;
+  border-radius: 30px;
+  margin: 2%;
+  height: fit-content;
+  margin-top: 5%;
+  padding: 2%;
+  padding-bottom: 4%;
+  text-align: center;
+  
+}
+
+
+
+.small-box h2{
+  margin-bottom: 5%;
+}
+
+.table-container {
+  overflow-x: auto; 
+  margin-top: 10px; 
+  width: 100%;
+}
+
+table {
+  min-width: 50%;
+}
+
+table, th, td{
+  border: 1px solid rgba(255, 255, 255, 0.243);
+  border-collapse: collapse;
+  padding: 10px;
+  color: white;
+}
+
+.table-container {
+  overflow-x: auto; 
+  margin-top: 10px; 
+  width: 100%;
+}
+
+
+.small-box button{
+  background-color: rgb(39, 161, 202);
+  border: none;
+  color: white;
+  padding: 2%;
+  border-radius: 10px;
+  font-size: 100%;
+  font-weight: bold;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.msg_error{
+  color:red;
+  font-size: 20px;
+}
+.msg_succes{
+  color:rgb(0, 255, 132);
+  font-size: 20px;
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal h2{
+  color: rgb(39, 161, 202);
+}
+
+.modal-content {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  color: #6a6a6a;
+  font-size: 200%;
+}
+
+
+label{
+  color:#6a6a6a;
+  font-weight: bold;
+}
+
+
+#form {
+  width: auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  font-size: 12px;
+  
+}
+
+#passwordBlur {
+  cursor: pointer;
+  filter: blur(4px); /* Ajusta el valor de desenfoque según sea necesario */
+  transition: filter 0.3s ease; /* Agrega una transición para suavizar el cambio */
+}
+
+#passwordBlur.active {
+  filter: blur(0);
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+.input-control input {
+  border: 2px solid #aaa5a5;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  padding-right: 2px;
+  padding-left: 2px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+.caja-registro-footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+
+
+/* ----- ACA ES LO DE LOS ARCHIVOS */
+
+.tus-archivos h2{
+  margin-bottom: 5%;
+}
+
+
+.tus-archivos {
+  border: solid 3px #3c6a9e9f;
+  width: auto;
+  border-radius: 30px;
+  overflow: hidden;
+  justify-content: space-between;
+  margin: 2%;
+  margin-top: 5%;
+  height: fit-content;
+  max-height: 100%;
+  padding: 2%;
+}
+
+.izq{
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 15px; /* Agrega espaciado interno */
+  border: solid 3px #3c6a9e9f;
+  border-radius: 30px; /* Agrega bordes redondeados */
+  /* Agrega margen entre las cajas */
+  
+}
+.der {
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 15px; /* Agrega espaciado interno */
+  border: solid 3px #3c6a9e9f;
+  border-radius: 30px; /* Agrega bordes redondeados */
+  margin-top: 3%;
+}
+
+.izq h4,
+.der h4{
+  font-size:150%;
+  padding: 5%;
+  color: #fff;
+}
+
+/* ACA TERMINA  MODAL CAJA COMENTS*/
+
+@media only screen and  (max-width:768px){
+  *{
+    overflow-x: hidden;
+  }
+  .header {
+      height: auto; /* Ajusta la altura según el contenido */
+      max-height: 400px;
+      flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    }
+  .logo {
+    margin-bottom: 0;
+    margin-right: 20%;
+    margin: 2% auto; /* Centra el logo */
+  }
+  .titulo {
+      margin: 2% auto; /* Centra el título */
+  }
+  .titulo h1{
+      font-size: 60px;
+  }
+  .titulo h6{
+      font-size: 15px;
+      margin-bottom: 0;
+  }
+  .sidebar_menu{
+    min-width: 100px;
+    width: auto;
+  }
+  .sidebar_menu .menu li a{
+    font-size: 12px;
+  }
+
+  .sidebar_menu .logo h2{
+    font-size: 12px;
+} 
+table {
+  min-width: 50%;
+  font-size: 80%;
+}
+
+}
+
+
+
+
+
+
+
+
+/* -------- SUBIR ARCHIVOS   ---------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- END SUBIR ARCHIVOS   ---------  */
+
+
+
+/* -------- PERFIL   ---------  */
+
+
+
+
+/* -------- END PERFIL   ---------  */

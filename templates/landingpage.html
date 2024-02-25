@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>landingpage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/css/landingpage.css'>
+    <script src='../static/javascript/landingpage.js'></script>
+</head>
+<body>
+    <header id="2" class="header">
+        <div class="logo">
+            <div class="titulo">
+                <a class="reset" id="reload" href="/">
+                <h1>Ed<mark class="uca">uca</mark>dos</h1>
+                <h6>Tu herramienta de estudio</h6>
+                </a>
+            </div>
+        </div>
+        <div class="cosas">
+
+        </div>
+        <div class="login">
+            <div class="registrarse">
+                <a href="login" class="btn-neon ingresar">
+                    Ingresar
+                </a>
+                <a href="register" class="btn-neon register">
+                    Registrarse
+                </a>
+            </div>
+        </div>
+        <div class="redesgeneral">
+            <div class="redes2">
+                <a href="https://www.instagram.com/"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"></a>
+                <a href="https://www.facebook.com/"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png"></a>
+                <a href="https://twitter.com/"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494465.png"></a>
+            </div>
+        </div>
+    </header>
+
+
+<!--NAVBAR-->
+<!---->
+    <div class="navbar" id="myNavbar">
+        <a href="#2" class="active">Home</a>
+        <a href="#3">Nuestros servicios</a>
+        <a href="#4">Live stats</a>
+        <a href="#5">¿Por qué elegirnos?</a>
+        <a href="verarchivos">Ver archivos</a>
+    </div>
+
+        
+    <!-- ... contenido ... -->
+
+
+    <div class="contenido">
+        <div class="servicios">
+            <h1>Hacemos <mark class="uca"> tus </mark>  estudios <mark class="uca"> más</mark> fáciles.</h1>
+            <p>
+                Colaboramos con estudiantes, graduados y profesores para que el aprendizaje sea mucho mejor.  
+            </p>
+            <a class="comenzar" href="login">Comenzar...</a>
+        </div>   
+    </div>
+
+
+    <!--Este div breve descripcion de nuestros servicios-->
+
+    <div id="3" class="excelencia">
+        <img src="https://www.proandroid.com/wp-content/uploads/2019/08/escanear.jpg">
+        <div class="texto">
+            <h4>NUESTROS SERVICIOS</h4>
+            <h2>Excelencia en Aprendizaje</h2>
+            <p>Ofrecemos un amplio catálogo de resúmenes, finales, 
+                parciales, muestras, charlas, entre otras cosas. 
+                Destinado para que estudiantes de la UCA y otras universidades puedan
+                aprender de manera fácil, rápida y sencilla. 
+            </p>
+        </div>
+    </div>
+
+    <!--Este div son las stats-->
+    <div id="4" class="title-stats">
+        <h2>Educados live stats:</h2>
+    </div>
+    <div class="container-stats">
+        <div class="stats contenido-stats">
+            <div class="contenido-stats">
+                <h3>{{param["cant_revisados"]}}</h3>
+                <p>Archivos verificados</p>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="contenido-stats">
+                <h3>{{param["cant_usuarios"]}}</h3>
+                <p>Miembros</p>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="contenido-stats">
+                <h3>+{{param["cant_resumenes"]}}</h3>
+                <p>Resúmenes</p>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="contenido-stats">
+                <h3>{{param["cant_contribuidores"]}}</h3>
+                <p>Contribuidores</p>
+            </div>
+        </div>
+    </div>
+    <!--ACA TERMINA STATS-->
+
+
+
+    <!--BURBUJAS-->
+    <div class="elegirnos" id="5">
+        <div class="title-cards">
+            <h2>¿Por qué elegirnos?</h2>
+        </div>
+        <div class="container-card">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ9DMNFHxwZcfPXJrJeBMITxPMP3FMZk_ixXzTfzt4G_C-G058">
+                <div class="contenido-card">
+                    <h3>TODO LO QUE NECESITAS</h3>
+                    <p>Subir y ver material de estudio de mánera fácil y rápida.</p>
+                    <a href="#">Leer Más</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://ayuda-psicologica-en-linea.com/wp-content/uploads/2020/06/haciendo-resumen.png">
+                <div class="contenido-card">
+                    <h3>SIMPLIFICA TUS ESTUDIOS</h3>
+                    <p>Para qué pasar horas buscando resumenes cuando lo tienes disponible en Educados.</p>
+                    <a href="#">Leer Más</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1391054420/es/foto/estudiantes-universitarios-ayud%C3%A1ndose-unos-a-otros.jpg?s=170667a&w=0&k=20&c=TDW71fOOxOYSO6pwN8AWZcVziUYyP4QFwbN6BPxPXb8=">
+                <div class="contenido-card">
+                    <h3>AYUDA A MÁS ESTUDIANTES</h3>
+                    <p>Subi tus archivos y colabora con los estudios de la comunidad.</p>
+                    <a href="#">Leer Más</a>
+                </div>
+            </div>
+        </div>
+    </div>      
+    <!-- END BURBUJAS-->
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>Ed<mark class="uca">uca</mark>dos</h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                |
+                <a href="#3">Servicios</a>
+                |
+                <a href="#4">Stats</a>
+                |
+                <a href="">Archivos</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>LOS PIBES</strong>
+                 Todos los derechos reservados.
+            </p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <p><span>Buenos Aires, UCA</span>
+                    Argentina</p>
+            </div>
+
+            <div class="gmail">
+                <p>DESARROLLADORES:</p>
+                <p><a href="juanrosenfeld@uca.edu.ar">juanrosenfeld@uca.edu.ar</a></p>
+                <p><a href="manteljoaquin@uca.edu.ar">manteljoaquin@uca.edu.ar</a></p>
+                <p><a href="ivanoffluis@uca.edu.ar">ivanoffluis@uca.edu.ar</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre nosotros</span>
+                <strong>Educados</strong> es una página web que busca que miles de 
+                estudiantes puedan acceder a material de estudio de manera rápida y sencilla.
+                Imagina una plataforma donde los estudiantes pueden subir archivos
+                que han creado durante su proceso de aprendizaje, desde resúmenes
+                y esquemas hasta presentaciones y documentos de investigación.
+                Estos archivos se convierten en tesoros educativos compartidos,
+                a los que cualquier estudiante puede acceder.
+            </p>
+            <div class="footer-icons">
+                <div class="container redesgeneral">
+                    <div class="redes2">
+                        <a href="https://www.instagram.com/"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png"></a>
+                        <a href="https://www.facebook.com/"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png"></a>
+                        <a href="https://twitter.com/"><img src="https://cdn-icons-png.flaticon.com/128/4494/4494465.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

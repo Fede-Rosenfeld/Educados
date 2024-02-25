@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Subir archivos</title>
+    <link rel="stylesheet" type='text/css' media='screen' href="../static/css/subirarch.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="titulo">
+                <a class="reset" id="reload" href="verarchivos">
+                <h1>Ed<mark class="uca">uca</mark>dos</h1>
+                <h6>Tu herramienta de estudio</h6>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="main_box">
+          <!--TERMINA SIDEBAR-->
+        {% block sidebar %}   
+
+        {% include "sidebar.html" %}
+
+        {% endblock %}
+
+
+        <!--TERMINA SIDEBAR-->
+        <div class="contenido">
+            <!-- SUBIR ARCHIVOS -->
+
+            <div class="contenedor-subirarch">
+              <form id="form" action="/uploader" method="post" enctype="multipart/form-data">
+                  <div class="subarch">
+                    <div><h1>Subir Archivos</h1></div>
+                    <div><h3>Seleccionar archivo:</h3></div>
+                    <div class="input">
+                      <label for="inputTag">
+                        Selecciona el archivo
+                        <input id="inputTag" name="pdf" type="file" accept=".pdf" />
+                        <span id="imageName"></span>
+                      </label>
+                    </div>
+                    <p>Recuerda subir archivo PDF</p>
+                  </div>
+                  <div class="infoarch">
+                    <div>
+                      <span class="">Nombre del archivo:</span>
+                      <input type="text" name="nombrearch" placeholder="Ingrese nombre del archivo" id="nomarch">
+                    </div>
+                    <div>
+                      <span class="">De qué tipo es el archivo:</span>
+                      <select name="tipo" id="tipo">
+                        <option value="Tipos" disabled selected>Tipos</option>
+                        {% for tipo in param["lista_tipos"] %}
+                          <option value="{{ tipo[0] }}">{{ tipo[1] }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    <div>
+                      <span class="">De qué materia es el archivo:</span>
+                      <select name="materias" id="materias">
+                        <option value="Materia" disabled selected>Materia</option>
+                        {% for materia in param["lista_materias"] %}
+                          <option value="{{ materia[0] }}">{{ materia[1] }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                    
+                    </div>
+                    <div>
+                      <input id="subirarchivo" type="submit" value="Subir Archivo">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            <!-- END SUBIR ARCHIVOS -->
+        </div>
+    </div>
+    <script src="../static/javascript/subirarch.js"></script>
+</body>
+</html>

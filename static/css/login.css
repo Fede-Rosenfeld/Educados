@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(130deg,rgba(2,0,36,1) 0%, rgba(28,78,130,1) 35%, rgba(65,73,105,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+#form {
+    width: 450px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+    
+}
+
+.msg{
+    color:red;
+    font-size: 20px;
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #aaa5a5;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.caja-registro-footer {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #form {
+        width: 280px; 
+    }
+}

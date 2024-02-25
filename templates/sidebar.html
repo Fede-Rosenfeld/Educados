@@ -1,0 +1,17 @@
+<button id="{{ param['boton']['id'] }}" class="{{ param['boton']['class'] }}">&#9776</button>
+        <div class="sidebar_menu" id="menu">
+            <div class="logo">
+                <h2>{{ param['menu']['PERFIL']['content'] }}</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <!-- iterar a través de las claves y valores
+                         del diccionario param['menu'] de manera adecuada.-->
+                    {% for key, option in param['menu'].items() %} 
+                    <li>
+                        <a href="{{ option['href'] }}">{{ option['content'] }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>

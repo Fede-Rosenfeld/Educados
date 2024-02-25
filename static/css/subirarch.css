@@ -1,0 +1,354 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+body{
+    width:100%;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(28,78,130,1) 35%, rgba(65,73,105,1) 100%);
+    color:white;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+
+  /* ---- END GLOBAL ---- */
+  
+  
+  /* ---- HEADER ---- */
+  
+  .header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    color: white;
+    box-sizing: content-box;
+  }
+  
+  .logo{
+    margin-left: 2%;
+    align-items: center;
+    height: 100%;
+    margin-right: 2%;
+  }
+  .titulo{
+    width: auto;
+    height: auto;
+    display: table;
+  }
+  
+  .titulo .reset{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .titulo h1 {
+    font-size: 55px;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .uca {
+    background: rgb(0, 0, 0, 0);
+    color: rgb(39, 161, 202);
+  }
+  .titulo h6{
+    margin-top: 0;
+    margin-left: 1%;
+    font-size: 15px;
+  }
+
+
+
+
+
+
+
+
+  .main_box{
+    display: flex;
+    min-height: 100vh;
+    width: auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.toglesidebar{
+  margin-left: 1%;
+  height: 3%;
+  width: 50px;
+  font-size: 40px;
+  background: none;
+  border: solid 2px #3c6a9e9f;
+  border-radius: 10px;
+  color:white;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px #3c6a9e9f;
+}
+.sidebar_menu{
+  display: none;
+    margin-left: 1%;
+    position: sticky;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.1);
+    border: #3c6a9e9f;
+    border-style: solid;
+    border-radius: 30px ;
+    box-shadow: 0px 0px 6px #3c6a9e9f;
+}
+.sidebar_menu .logo{
+  width: 98%;
+  height: 60px;
+  border-bottom: solid #3c6a9e9f;
+}
+.sidebar_menu .logo h2{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  left: 10px;
+  line-height: 60px;
+  text-decoration: none;
+}
+.sidebar_menu .menu{
+  position: absolute;
+  top: 80px;
+  width:100%;
+}
+.sidebar_menu .menu li{
+  list-style: none;
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+.sidebar_menu .menu i{
+  color: #fff;
+  font-size: 20px;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a{
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.sidebar_menu .menu li:hover{
+  border-left: 1px solid #fff;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+
+.contenido{
+    display: flex;
+    width: 100%;
+    margin: 2%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 3px #3c6a9e9f;
+    border-style: solid;
+    border-radius: 30px;
+}
+
+
+
+/* -------- SUBIR ARCHIVOS   ---------  */
+
+/* ACORDATE DE DESABILITARLOOOO */
+
+
+
+
+.contenedor-subirarch{
+  display:flow-root;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.1);
+  margin: auto;
+  border: solid 3px #3c6a9e9f;
+  border-radius: 30px;
+}
+.contenedor-subirarch p{
+  margin-top: 10px;
+}
+
+.subarch {
+  display: table;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.subarch h1{
+  color: black;
+}
+
+.input{
+  margin-top: 5%;
+  text-align:center;
+  padding:3%;
+  width: 180px;
+  border:thin solid #000000;
+  border-radius: 30px;
+}     
+input[type="file"]{
+  display: none;
+}
+
+label{
+  cursor:pointer;
+}
+
+#imageName{
+  color:rgb(0, 0, 0);
+}
+
+
+
+
+.infoarch{
+  display: table;
+  margin: 10%;
+  margin-top: 5%;
+  justify-content: center;
+}
+
+.infoarch input[type="text"]{
+  text-align: center;
+  width: auto;
+}
+
+.infoarch div{
+  font-size: 20PX;
+  display: table;
+  margin: 4%;
+  justify-content: center;
+}
+
+.infoarch input, .infoarch select{
+  width: auto;
+  font-size: 16px; /* Ajusté la unidad a minúsculas para ser coherente */
+  margin: 1%;
+  border-radius: 20px;
+  padding: 5px;
+  max-height: 150px; /* Puedes ajustar el valor según tus necesidades */
+  overflow-y: visible;
+}
+
+
+
+
+input[type="submit"] {
+  margin-top: 3%;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+@media only screen and  (max-width:768px){
+  *{
+    overflow-x: hidden;
+  }
+  .header {
+      height: auto; /* Ajusta la altura según el contenido */
+      max-height: 400px;
+    }
+  .logo {
+    margin-bottom: 0;
+    margin-right: 20%;
+    margin: 2% auto; /* Centra el logo */
+  }
+  .titulo {
+      margin: 2% auto; /* Centra el título */
+  }
+  .titulo h1{
+      font-size: 60px;
+  }
+  .titulo h6{
+      font-size: 15px;
+      margin-bottom: 0;
+  }
+
+  
+  .sidebar_menu{
+    min-width: 100px;
+    width: auto;
+  }
+  .sidebar_menu .menu li a{
+    font-size: 12px;
+  }
+
+  .sidebar_menu .logo h2{
+    font-size: 12px;
+}  
+
+  .contenedor-subirarch{
+    align-items: center;
+    width: auto;
+    margin: auto;
+    margin-top: 0;
+  }
+
+  .subarch h1{
+    font-size: 25px;
+  }
+
+  .subarch h3{
+    font-size: 20px;
+  }
+
+
+
+  .infoarch {
+    margin: 0;
+  }
+
+  .infoarch div{
+    font-size: 16PX;
+  }
+  .infoarch input, .infoarch select{
+    font-size: 14PX;
+    margin: 1%;
+    border-radius: 20px;
+    padding: 3px;
+  }
+  .input{
+    margin: 2%;
+    width: auto;
+  }  
+}
+
+
+
+
+
+
+
+
+
+
+/* -------- END SUBIR ARCHIVOS   ---------  */
+
+
+
+/* -------- PERFIL   ---------  */
+
+
+
+
+/* -------- END PERFIL   ---------  */

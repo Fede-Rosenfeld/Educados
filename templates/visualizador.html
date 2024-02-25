@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------- LINK de CSS -------->
+    <link rel="stylesheet" href="../static/css/visualizador.css">
+    <!----------------------------->
+    <title>Visualizador PDF</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container logo">
+            <div class="titulo">
+                <a class="reset" id="reload" href="verarchivos">
+                <h1>Ed<mark class="uca">uca</mark>dos</h1>
+                <h6>Tu herramienta de estudio</h6>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="main_box">
+        <!--TERMINA SIDEBAR-->
+        {% block sidebar %}   
+
+        {% include "sidebar.html" %}
+
+        {% endblock %}
+
+
+        <!--TERMINA SIDEBAR-->
+        <div class="contenido">
+            <!-- Título -->
+            <h1 class="title">Visualizador de PDF</h1>
+            <!-- title -->
+            <object class="pdfview" type="application/pdf" data="../static/extras/teoriapunto.pdf"></object>
+            <!-- Aprende más sobre object tag: https://www.w3schools.com/tags/tag_object.asp -->
+            <!-- Puede usarse tanto archivos PDF en la Web o locales -->
+
+        </div>
+    </div>
+    <script src="../static/javascript/visualizador.js"></script>
+    
+</body>
+</html>

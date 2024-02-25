@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Documentos Subidos</title>
+    <link rel="stylesheet" type='text/css' media='screen' href="../static/css/subidos.css">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="titulo">
+                <a class="reset" id="reload" href="verarchivos">
+                <h1>Ed<mark class="uca">uca</mark>dos</h1>
+                <h6>Tu herramienta de estudio</h6>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="main_box">
+        <!--TERMINA SIDEBAR-->
+        {% block sidebar %}   
+
+        {% include "sidebar.html" %}
+
+        {% endblock %}
+
+
+        <!--TERMINA SIDEBAR-->
+
+
+        <div class="contenido">
+            <!-- PARTE DE ARRIBA -->
+            <div class="miscreados">
+                <h1>Archivos subidos</h1>
+            </div>
+            <div id="verarch1" class="arriba">
+                <div class="filtros">
+                    <h2>Filtros:</h2>
+                </div>
+                <form id="form_filtro">
+                    <input class="filtrado" id="nombrebuscar" type="text" placeholder="Busca el nombre del archivo">
+                    <input class="buscar" id="buscar" type="submit" value="BUSCAR">
+                </form>
+            </div>
+
+            <div id="verarch2"  class="contenedor-de-cajas">
+                <div id="mensaje_no_coincidencias" class="nocoincidencia">No se encontraron archivos con ese nombre</div>
+                {% for momento in param["cantdatos"] %}
+                    <div class="caja">
+                        <div class="content-cajas">
+                            <a href="{{ url_for('static', filename='uploads/' + param[momento]['nombre_pdf']) }}" target="_blank">
+                                <p>PREVISUALIZAR ARCHIVO</p>
+                            </a>
+                            <div class="nomarch">
+                                <h3>{{ param[momento]["nombre_archivo"] }}</h3>
+                            </div>
+                            <div class="info">
+                                <div class="usuario"><p>{{ param[momento]["nombre_usuario"] }}</p></div>
+                                <div class="materia"><p>{{ param[momento]["nombre_materia"] }}</p></div>
+                                <div class="tipo"><p>{{ param[momento]["nombre_tipo"] }}</p></div>
+                                    <div class="stats">
+                                        <span id="cantlikes" class="cantlikes">Likes: {{ param[momento]['cant_likes'] }}</span>
+                                        <span id="icono_comentarios" class="comentarios">&#9993;</span>
+                                        <div id="modal-coms" class="modal-coms">
+                                            <div class="modal-coments-box">
+                                                <span class="close-modal" id="close-modal">&times;</span>
+                                                <h2>Comentarios</h2>
+                                                {% for comment in param[momento]["comentarios"] %}
+                                                    <div class="coments">
+                                                        <h3>{{ comment["nombre"] }}</h3>
+                                                        <p>{{ comment["text"] }}</p>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                        </div> 
+                                        <form class="borrarForm" id="borrar{{ param[momento]["archivo_id"] }}" action="/borrararchivo" method="get">
+                                            <input type="hidden" name="archivo_id" value="{{ param[momento]["archivo_id"] }}">
+                                            <button type="submit">
+                                                <span id="delete" class="delete">&#128465;</span>
+                                            </button>
+                                        </form>
+                                    </div> 
+                                </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/javascript/subidos.js"></script>
+</body>
+</html>&#128465&#128465&#128465
